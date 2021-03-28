@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Service Handler</title>
+</head>
+<body>
+	<h1>I am trying to thymeleaf...</h1>
+	<!-- Going to bring footer here -->
+	<!--  
+	<footer id="hostTag" th:include="footer::footer1('This is title','This is subtitle')">  to pass value from this page	
+	                                                                                             
+	</footer>  
+	-->
+	
+	<!-- to pass value from controller page -->                 
+	<footer id="hosttag" th:replace="footer::footer1(${title},${subtitle})">
+	                                                                 
+	</footer>
+
+
+</body>
+</html>

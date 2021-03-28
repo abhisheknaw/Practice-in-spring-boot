@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1>About Abhishek learn the code</h1>
+	<h1>We are learning spring boot and we are in about.html</h1>
+	
+	<h2>Name of the owner is</h2>
+	<h2 th:text="${name}"></h2>                 <!-- to take value from other file -->
+	
+	<h2> Name of the owner is <span th:text="${name}"></span></h2> <!-- to print using span -->
+	
+	<h2 th:text="'the value of'+${name}"></h2>    <!--  to print value in same line using h1 -->
+	<h2 th:text="${currentDate}"></h2>
+	
+	<div th:with="a=5,b=12,n=${name}">             <!-- defining local values  -->                 
+	<h1>value of a is <span th:text = "${a}"></span></h1>
+	<h1 th:text="'the value of b is'+${b}"></h1>
+	<h1 th:text="'local value of b is' +${n}"></h1>
+	</div>
+	
+</body>
+</html>

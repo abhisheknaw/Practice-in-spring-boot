@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Example of loop</title>
+</head>
+<body>
+	<h1>Going to traverse the elements in loop....</h1>
+	
+	<h2 th:text="${names}"></h2>   <!-- directly print all the elements -->
+	
+	<ul>
+		<li th:each="n,status :${names}">          <!-- print status and traverse each element single handedly -->
+			<span th:style="${status.odd} ? 'font-weight:bold;color:red'" th:text="${status.index+1}+ ' ' +${n}"></span>   
+		</li>
+	</ul>
+</body>
+</html>
